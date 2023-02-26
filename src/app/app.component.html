@@ -1,18 +1,12 @@
 <div>
-  <h1>Hello Angular</h1>
+  <h1>Hi Movies</h1>
 </div>
 
-<div *ngIf="!persons">
-  <p>Trying to fetch data</p>
-</div>
-<div *ngIf="persons?.length === 0">
-  <p>No data found</p>
-</div>
+<h2>Current Movies</h2>
+<app-movies-list  [movies] ="moviesInTheaters"> </app-movies-list>
 
-<div *ngFor="let person of persons let index = index" style="border: 1px solid black">
-  <div>{{index+1}} - {{person.name | lowercase}}</div>
-  <div>{{person.age}}</div>
-  <div>{{person.interest | uppercase}}</div>
-  <div>{{person.dob | date:'dd MMMM yyyy'| uppercase}}</div>
-  <div> {{person.salery |  currency:'USD' }}</div>
-</div>
+
+<h2>Up-Coming Movies</h2>
+<app-movies-list [movies]="moviesInFutureRelease"> </app-movies-list>
+
+

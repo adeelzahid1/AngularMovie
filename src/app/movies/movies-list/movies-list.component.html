@@ -1,1 +1,14 @@
-<p>movies-list works!</p>
+<div *ngIf="!movies">
+  <p>Trying to fetch data</p>
+</div>
+<div *ngIf="movies?.length === 0">
+  <p>No data found</p>
+</div>
+
+<div *ngFor="let movie of movies let index = index" class="marginBottom20px">
+  <div>{{index+1}} - {{movie.name | lowercase}}</div>
+  <div>{{movie.age}}</div>
+  <div>{{movie.interest | uppercase}}</div>
+  <div>{{movie.dob | date:'dd MMMM yyyy'| uppercase}}</div>
+  <div> {{movie.salery |  currency:'USD' }}</div>
+</div>
