@@ -2,9 +2,17 @@
   <h1>Hello Angular</h1>
 </div>
 
+<div *ngIf="!persons">
+  <p>Trying to fetch data</p>
+</div>
+<div *ngIf="persons?.length === 0">
+  <p>No data found</p>
+</div>
+
 <div *ngFor="let person of persons let index = index" style="border: 1px solid black">
-  <div>{{index+1}} - {{person.name}}</div>
+  <div>{{index+1}} - {{person.name | lowercase}}</div>
   <div>{{person.age}}</div>
   <div>{{person.interest | uppercase}}</div>
-  <div>{{person.dob | date:'dd MMMM yyyy'}}</div>
+  <div>{{person.dob | date:'dd MMMM yyyy'| uppercase}}</div>
+  <div> {{person.salery |  currency:'USD' }}</div>
 </div>
