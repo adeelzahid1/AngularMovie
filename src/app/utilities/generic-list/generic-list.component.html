@@ -11,8 +11,17 @@
 
 
 <div *ngIf="list?.length === 0">
-  <p>No data found</p>
+  <span #empty>
+    <ng-content select="[empty]">
+    </ng-content>
+  </span>
+
+  <span *ngIf="!empty.innerHTML.trim()">
+    <p>No data found</p>
+  </span>
 </div>
+
+
 
 <ng-container *ngIf="list && list?.length > 0">
   <ng-content select="[content]"></ng-content>
