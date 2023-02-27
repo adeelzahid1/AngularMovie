@@ -11,7 +11,11 @@ export class MoviesListComponent implements OnInit{
   }
 
   @Input()
-
   movies: any | null;
 
+
+  Remove(index: number, movie: any){
+    this.movies.splice(index, 1);
+    console.warn(index);
+  }
 }

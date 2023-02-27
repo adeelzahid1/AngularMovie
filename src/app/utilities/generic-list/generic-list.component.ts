@@ -8,14 +8,18 @@ import { Component, Input, OnInit } from '@angular/core';
 export class GenericListComponent implements OnInit{
 
   @Input()
-  list: any;
+  GenericList: any | null;
 
   constructor(){};
 
   ngOnInit(): void {
-
+      console.log(this.GenericList);
   }
 
 
-
+  ngAfterViewInit(): void {
+    //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
+    //Add 'implements AfterViewInit' to the class.
+    console.log(typeof(this.GenericList));
+  }
 }

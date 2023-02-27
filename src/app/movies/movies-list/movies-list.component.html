@@ -1,12 +1,13 @@
-<app-generic-list list="movies">
-  <ng-container content>
+
+ <app-generic-list [GenericList]="movies">
+  <ng-container movie-content>
     <div *ngFor="let movie of movies let index = index" class="marginBottom20px">
       <div>{{index+1}} - {{movie.name | lowercase}}</div>
       <div>{{movie.age}}</div>
       <div>{{movie.interest | uppercase}}</div>
       <div>{{movie.dob | date:'dd MMMM yyyy'| uppercase}}</div>
       <div> {{movie.salery |  currency:'USD' }}</div>
+      <button (click)="Remove(index, movie)">Remove</button>
     </div>
   </ng-container>
-</app-generic-list>
-
+ </app-generic-list>
