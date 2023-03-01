@@ -52,4 +52,8 @@ export class AppComponent implements OnInit{
   moviesInFutureRelease : any  | null;
 
 
+  handleRating(rate: number){
+    alert(`the user selected ${rate} Start `)
+  }
+
 }

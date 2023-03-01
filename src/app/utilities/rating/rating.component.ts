@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-rating',
@@ -17,35 +17,25 @@ selectedRate: number = 0;
 previousRate : number = 0;
 maxRatingArray: any;
 
+@Output()
+onRating : EventEmitter<number> = new EventEmitter<number>();
+
 ngOnInit(): void {
-  console.log('INIT');
   this.maxRatingArray = Array(this.maxRating).fill(0);
 }
 
 handleMouseEnter(index: number){
   this.selectedRate = index + 1;
-  console.log(` Mouse Enter >> rate ${this.selectedRate}  , index ${index+1}`)
-
 }
 
 handleMouseLeave(){
-  console.log(`mouse leave : rate ${this.previousRate} `)
-  debugger;
-  if(this.previousRate !== 0){
-    this.selectedRate = this.previousRate;
-  }
-  else{
-    this.selectedRate = 0;
-  }
-
-  console.log(this.selectedRate);
-  // this.selectedRate = this.previousRate !== 0 ? this.previousRate : 0;
-  // alert(this.selectedRate);
+   this.selectedRate = this.previousRate !== 0 ? this.previousRate : 0;
 }
 
 rate(index: number){
   this.selectedRate = index + 1;
   this.previousRate = this.selectedRate;
+  this.onRating.emit(this.selectedRate);
 }
 
 
