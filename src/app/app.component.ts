@@ -47,7 +47,7 @@ export class AppComponent implements OnInit{
 
 
 
-  title = 'AngularMovie';
+  title : String= 'AngularMovie';
   moviesInTheaters : any | null;
   moviesInFutureRelease : any  | null;
 
