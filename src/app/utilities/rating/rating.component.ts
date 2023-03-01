@@ -39,4 +39,6 @@ rate(index: number){
 }
 
 
+
+
 }
