@@ -18,17 +18,15 @@ const routes: Routes = [
   {path: 'genres', component: IndexGenresComponent},
   {path: 'genres/create', component: CreateGenreComponent},
   {path: 'genres/edit/:id', component: EditGenreComponent},
-
   {path: 'actors', component: IndexActorsComponent},
   {path: 'actors/create', component: CreateActorComponent},
   {path: 'actors/edit/:id', component: EditActorComponent},
-
   {path: 'movietheathers', component: IndexMovieTheatherComponent},
   {path: 'movietheathers/create', component: CreateMovieTheatherComponent},
   {path: 'movietheathers/edit/:id', component: EditMovieTheatherComponent},
-
   {path: 'movies/create', component: CreateMovieComponent},
   {path: 'movies/edit/:id', component: EditMovieComponent},
+  {path: '**', redirectTo: ''}
 
 ];
 
