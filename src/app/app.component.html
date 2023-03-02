@@ -2,11 +2,23 @@
 
 </app-menu>
 
+<div class="container">
+  <h2>Current Movies</h2>
+  <app-movies-list [movies]="moviesInTheaters"> </app-movies-list>
+
+  <h2>Up-Coming Movies</h2>
+  <app-movies-list [movies]="moviesInFutureRelease"> </app-movies-list>
+</div>
+
+
+
+
+
 <!-- <app-rating (onRating)="handleRating($event)">
 
 </app-rating> -->
 
-<input type="checkbox" checked (change)="display = !display"> Display
+<!-- <input type="checkbox" checked (change)="display = !display"> Display
 <div *ngIf="!display">
 <input type="text" (input)="OnInputChange($event)" />
 
@@ -14,14 +26,6 @@
 
 </app-life-cycle-test>
 
-</div>
-
-<!-- <div class="container">
-  <h1>Hi Movies</h1>
-  <h2>Current Movies</h2>
-  <app-movies-list [movies]="moviesInTheaters"> </app-movies-list>
-
-  <h2>Up-Coming Movies</h2>
-  <app-movies-list [movies]="moviesInFutureRelease"> </app-movies-list>
 </div> -->
+
 

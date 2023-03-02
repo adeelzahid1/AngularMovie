@@ -16,36 +16,36 @@ export class AppComponent implements OnInit{
     setTimeout(() => {
      this.moviesInTheaters = [
        {
-         name: 'spider-man',
-         age: 26,
-         interest: 'programming',
-         dob: new Date(),
-         salery: 209.2000,
+         title: 'Spider-Man',
+         genre: 'Action',
+         releaseDate: new Date(),
+         price: 209.2000,
+         poster: 'https://images.pexels.com/photos/8421963/pexels-photo-8421963.jpeg?auto=compress&cs=tinysrgb&w=600'
        },
        {
-         name: 'golmal',
-         age: 27,
-         interest: 'database',
-         dob: '2022-10-01',
-         salery: 200.2000,
+         title: 'Super-Man',
+         genre: 'Action',
+         releaseDate: '2022-10-01',
+         price: 200.2000,
+         poster: 'https://images.pexels.com/photos/10336820/pexels-photo-10336820.jpeg?auto=compress&cs=tinysrgb&w=600'
        },
      ]
 
      this.moviesInFutureRelease = [
-       {
-         name: 'golman 2',
-         age: 26,
-         interest: 'programming',
-         dob: new Date(),
-         salery: 209.2000,
-       },
-       {
-         name: 'ok 2',
-         age: 27,
-         interest: 'database',
-         dob: '2022-10-01',
-         salery: 200.2000,
-       },
+      {
+        title: 'Spider-Man',
+        genre: 'Action',
+        releaseDate: new Date(),
+        price: 209.2000,
+        poster: 'https://images.pexels.com/photos/8421963/pexels-photo-8421963.jpeg?auto=compress&cs=tinysrgb&w=600'
+      },
+      {
+        title: 'Super-Man',
+        genre: 'Action',
+        releaseDate: '2022-10-01',
+        price: 200.2000,
+        poster: 'https://images.pexels.com/photos/10336820/pexels-photo-10336820.jpeg?auto=compress&cs=tinysrgb&w=600'
+      },
      ]
     }, 200);
    }
