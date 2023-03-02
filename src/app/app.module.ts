@@ -10,6 +10,8 @@ import {MaterialModule} from './material/material.module';
 import { MenuComponent } from './menu/menu.component';
 import { RatingComponent } from './utilities/rating/rating.component';
 import { LifeCycleTestComponent } from './life-cycle-test/life-cycle-test.component';
+import { HomeComponent } from './home/home.component';
+import { IndexGenresComponent } from './genres/index-genres/index-genres.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { LifeCycleTestComponent } from './life-cycle-test/life-cycle-test.compon
     MenuComponent,
     RatingComponent,
     LifeCycleTestComponent,
+    HomeComponent,
+    IndexGenresComponent,
   ],
   imports: [
     BrowserModule,
