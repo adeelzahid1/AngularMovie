@@ -42,7 +42,7 @@ export class FormGenreComponent {
     // save genre : Todo
     console.log('save changes');
     this.onSaveChanges.emit(this.form.value);
-    // this.router.navigate(['/genres']);
+     this.router.navigate(['/genres']);
   }
 
   getErrorMessageFieldName(){
