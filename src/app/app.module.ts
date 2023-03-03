@@ -22,6 +22,7 @@ import { EditActorComponent } from './actors/edit-actor/edit-actor.component';
 import { EditGenreComponent } from './genres/edit-genre/edit-genre.component';
 import { EditMovieTheatherComponent } from './movie-theathers/edit-movie-theather/edit-movie-theather.component';
 import { EditMovieComponent } from './movies/edit-movie/edit-movie.component';
+import { FormGenreComponent } from './genres/form-genre/form-genre.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { EditMovieComponent } from './movies/edit-movie/edit-movie.component';
     EditGenreComponent,
     EditMovieTheatherComponent,
     EditMovieComponent,
+    FormGenreComponent,
   ],
   imports: [
     BrowserModule,
