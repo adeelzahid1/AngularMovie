@@ -22,7 +22,8 @@ export class FormActorComponent implements OnInit{
       name: ['',{
         validators: [Validators.required]
       }],
-      dateOfBirth: ''
+      dateOfBirth: '',
+      picture: ''
     })
 
     if(this.model !== undefined){
@@ -32,6 +33,10 @@ export class FormActorComponent implements OnInit{
 
   saveChanges(){
     this.onSaveChanges.emit(this.form.value)
+  }
+
+  onImageSelected(image : File){
+    this.form.get('picture').setValue(image);
   }
 
 

@@ -14,10 +14,12 @@
     <mat-error>The Name Field is Required</mat-error>
 </mat-form-field>
 
+<app-input-img (onImageSelected)="onImageSelected($event)">
+</app-input-img>
+
 <div>
   <button mat-flat-button color="primary" [disabled]="form.invalid">Save Changes</button>
   <a mat-stroked-button routerLink="/actors">Cancel</a>
 </div>
-
 
 </form>
