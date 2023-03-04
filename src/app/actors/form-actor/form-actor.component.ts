@@ -23,7 +23,8 @@ export class FormActorComponent implements OnInit{
         validators: [Validators.required]
       }],
       dateOfBirth: '',
-      picture: ''
+      picture: '',
+      biography: '',
     })
 
     if(this.model !== undefined){
@@ -38,6 +39,12 @@ export class FormActorComponent implements OnInit{
   onImageSelected(image : File){
     this.form.get('picture').setValue(image);
   }
+
+  changeMarkDown(event: Event){
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.form.get('biography').setValue(filterValue);
+  }
+
 
 
 }

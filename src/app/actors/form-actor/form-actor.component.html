@@ -14,12 +14,22 @@
     <mat-error>The Name Field is Required</mat-error>
 </mat-form-field>
 
-<app-input-img (onImageSelected)="onImageSelected($event)">
+<h4>Select Image</h4>
+<app-input-img
+   [urlCurrentImage] = "model?.picture"
+   (onImageSelected)="onImageSelected($event)">
 </app-input-img>
+
+<h4>Bio-Graphy</h4>
+<app-input-markdown
+     [markdownContent]="model?.biography"
+     (changeMarkDown)="changeMarkDown($event)">
+</app-input-markdown>
 
 <div>
   <button mat-flat-button color="primary" [disabled]="form.invalid">Save Changes</button>
   <a mat-stroked-button routerLink="/actors">Cancel</a>
 </div>
+
 
 </form>
