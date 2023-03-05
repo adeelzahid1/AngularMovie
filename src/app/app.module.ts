@@ -27,7 +27,10 @@ import { MoviesFilterComponent } from './movies/movies-filter/movies-filter.comp
 import { FormActorComponent } from './actors/form-actor/form-actor.component';
 import { InputImgComponent } from './utilities/input-img/input-img.component';
 import { InputMarkdownComponent } from './utilities/input-markdown/input-markdown.component';
-import { MarkdownModule } from 'ngx-markdown'
+import { MarkdownModule } from 'ngx-markdown';
+import { MovieTheatherFormComponent } from './movie-theathers/movie-theather-form/movie-theather-form.component'
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+import { MapComponent } from './utilities/map/map.component';
 
 
 @NgModule({
@@ -55,6 +58,8 @@ import { MarkdownModule } from 'ngx-markdown'
     FormActorComponent,
     InputImgComponent,
     InputMarkdownComponent,
+    MovieTheatherFormComponent,
+    MapComponent,
   ],
   imports: [
     BrowserModule,
@@ -63,6 +68,7 @@ import { MarkdownModule } from 'ngx-markdown'
     MaterialModule,
     ReactiveFormsModule,
     FormsModule,
+    LeafletModule,
     MarkdownModule.forRoot(),
   ],
   providers: [],
