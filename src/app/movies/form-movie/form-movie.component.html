@@ -32,11 +32,18 @@
   <h4>Summary</h4>
   <app-input-markdown
     [markdownContent]="model?.summary"
-    (changeMarkDown)="changeMarkDown($event)"
+    (changeMarkDown)="changeMarkDown($event.target.value)"
   >
   </app-input-markdown>
 
   <h4>Select the Genres</h4>
+  <app-multiple-selector
+    [NonSelectedItems]="nonSelectedGenre"
+    [SelectedItem]="selectedGenre"
+  >
+
+  </app-multiple-selector>
+
 
 
   <div>

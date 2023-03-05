@@ -33,7 +33,9 @@ import { MoviesFilterComponent } from './movies/movies-filter/movies-filter.comp
 import { FormActorComponent } from './actors/form-actor/form-actor.component';
 import { InputImgComponent } from './utilities/input-img/input-img.component';
 import { InputMarkdownComponent } from './utilities/input-markdown/input-markdown.component';
-import { MovieTheatherFormComponent } from './movie-theathers/movie-theather-form/movie-theather-form.component'
+import { MovieTheatherFormComponent } from './movie-theathers/movie-theather-form/movie-theather-form.component';
+import { FormMovieComponent } from './movies/form-movie/form-movie.component';
+import { MultipleSelectorComponent } from './utilities/multiple-selector/multiple-selector.component'
 // import "leaflet/dist/images/marker-shadow.png";
 // import 'leaflet/dist/images/marker-icon.png';
 
@@ -66,6 +68,8 @@ import { MovieTheatherFormComponent } from './movie-theathers/movie-theather-for
     InputMarkdownComponent,
     MovieTheatherFormComponent,
     MapComponent,
+    FormMovieComponent,
+    MultipleSelectorComponent,
   ],
   imports: [
     BrowserModule,
