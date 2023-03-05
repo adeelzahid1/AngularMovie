@@ -35,7 +35,8 @@ import { InputImgComponent } from './utilities/input-img/input-img.component';
 import { InputMarkdownComponent } from './utilities/input-markdown/input-markdown.component';
 import { MovieTheatherFormComponent } from './movie-theathers/movie-theather-form/movie-theather-form.component';
 import { FormMovieComponent } from './movies/form-movie/form-movie.component';
-import { MultipleSelectorComponent } from './utilities/multiple-selector/multiple-selector.component'
+import { MultipleSelectorComponent } from './utilities/multiple-selector/multiple-selector.component';
+import { ActorsAutocompleteComponent } from './actors/actors-autocomplete/actors-autocomplete.component'
 // import "leaflet/dist/images/marker-shadow.png";
 // import 'leaflet/dist/images/marker-icon.png';
 
@@ -70,6 +71,7 @@ import { MultipleSelectorComponent } from './utilities/multiple-selector/multipl
     MapComponent,
     FormMovieComponent,
     MultipleSelectorComponent,
+    ActorsAutocompleteComponent,
   ],
   imports: [
     BrowserModule,
