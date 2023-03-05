@@ -6,7 +6,7 @@
     </mat-form-field>
 
     <h4>Select The Location of the Theater</h4>
-    <app-map>
+    <app-map [initialCoordinates]="initialCoordinates" (onSelectedLocation)="onSelectedLocation($event)">
     </app-map>
 
 

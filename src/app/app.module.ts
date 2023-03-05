@@ -7,6 +7,12 @@ import { MoviesListComponent } from './movies/movies-list/movies-list.component'
 import { GenericListComponent } from './utilities/generic-list/generic-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
+import { MarkdownModule } from 'ngx-markdown';
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+import { MapComponent } from './utilities/map/map.component';
+
+
+
 import { MenuComponent } from './menu/menu.component';
 import { RatingComponent } from './utilities/rating/rating.component';
 import { LifeCycleTestComponent } from './life-cycle-test/life-cycle-test.component';
@@ -27,10 +33,10 @@ import { MoviesFilterComponent } from './movies/movies-filter/movies-filter.comp
 import { FormActorComponent } from './actors/form-actor/form-actor.component';
 import { InputImgComponent } from './utilities/input-img/input-img.component';
 import { InputMarkdownComponent } from './utilities/input-markdown/input-markdown.component';
-import { MarkdownModule } from 'ngx-markdown';
 import { MovieTheatherFormComponent } from './movie-theathers/movie-theather-form/movie-theather-form.component'
-import { LeafletModule } from '@asymmetrik/ngx-leaflet';
-import { MapComponent } from './utilities/map/map.component';
+// import "leaflet/dist/images/marker-shadow.png";
+// import 'leaflet/dist/images/marker-icon.png';
+
 
 
 @NgModule({

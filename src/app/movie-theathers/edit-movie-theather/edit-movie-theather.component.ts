@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { movieTheatherFormComponentDTO } from '../movie-theather-model';
+import { movieTheatherCreationDTO, movieTheatherDTO } from '../movie-theather-model';
 
 @Component({
   selector: 'app-edit-movie-theather',
@@ -11,7 +11,7 @@ export class EditMovieTheatherComponent implements OnInit {
 
     constructor(private activatedRouter: ActivatedRoute){};
 
-    model : movieTheatherFormComponentDTO = {name: 'Agora'};
+    model : movieTheatherDTO = {name: 'Agora', latitude: 31.404711078754563, longitude: 73.1239700317383};
 
   ngOnInit(): void {
     this.activatedRouter.params.subscribe((params) => {
@@ -19,7 +19,7 @@ export class EditMovieTheatherComponent implements OnInit {
     });
   }
 
-  saveChanges(movieTheather: movieTheatherFormComponentDTO){
+  saveChanges(movieTheather: movieTheatherCreationDTO){
 
   }
 
