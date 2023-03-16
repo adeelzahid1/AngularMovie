@@ -10,7 +10,7 @@ import { MaterialModule } from './material/material.module';
 import { MarkdownModule } from 'ngx-markdown';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 import { MapComponent } from './utilities/map/map.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 import { MenuComponent } from './menu/menu.component';
@@ -81,6 +81,7 @@ import { ActorsAutocompleteComponent } from './actors/actors-autocomplete/actors
     ReactiveFormsModule,
     FormsModule,
     LeafletModule,
+    HttpClientModule,
     MarkdownModule.forRoot(),
   ],
   providers: [],
