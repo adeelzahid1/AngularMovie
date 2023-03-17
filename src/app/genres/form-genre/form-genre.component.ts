@@ -40,9 +40,9 @@ export class FormGenreComponent {
 
   SaveChanges(){
     // save genre : Todo
-    console.log('save changes');
-    this.onSaveChanges.emit(this.form.value);
-     this.router.navigate(['/genres']);
+    // console.log('save changes');
+     this.onSaveChanges.emit(this.form.value);
+    //  this.router.navigate(['/genres']);
   }
 
   getErrorMessageFieldName(){

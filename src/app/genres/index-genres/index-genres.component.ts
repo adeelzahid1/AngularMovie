@@ -11,10 +11,20 @@ export class IndexGenresComponent implements OnInit{
   constructor(private genreService : GenresService ){}
 
   ngOnInit(): void {
-    this.genreService.getAll().subscribe(genres => {
-      console.warn(genres);
-    });
-  }
+
+    console.warn("Indexing INIT Called");
+
+this.genreService.getAll().subscribe(
+  {
+    next: (genre) => { console.warn(genre);},
+    error : (error) => {console.warn(error)},
+    complete : () => {console.warn("done")},
+     // doSomethingElse : ()
+   },
+ );
+
+
+};
 
 
 
