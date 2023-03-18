@@ -26,9 +26,9 @@ export class FormGenreComponent {
       name: ['', {
         validators: [
           Validators.required,
-           Validators.minLength(3),
-           Validators.maxLength(10),
-           firstLetterUpperCase()
+          //  Validators.minLength(3),
+          //  Validators.maxLength(10),
+          //  firstLetterUpperCase()
            ]
       }],
     });

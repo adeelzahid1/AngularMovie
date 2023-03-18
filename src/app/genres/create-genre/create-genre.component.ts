@@ -1,5 +1,6 @@
 import { Component,  OnInit} from '@angular/core';
 import { Router } from '@angular/router';
+import { parseWebApiError } from 'src/app/utilities/utils';
 import { genreCreationDTO } from '../genres.model';
 import { GenresService } from '../genres.service';
 
@@ -10,6 +11,7 @@ import { GenresService } from '../genres.service';
 })
 export class CreateGenreComponent implements OnInit{
 
+errors : string[]= [];
 
  constructor(private router: Router, private genreService: GenresService){}
 ngOnInit(): void {}
@@ -21,7 +23,7 @@ SaveChanges(genreCreationDTO: genreCreationDTO){
   this.genreService.createGenre(genreCreationDTO).subscribe(
      {
        next: () => { },
-       error : (error) => {console.warn(error)},
+       error : (error: any) => this.errors = parseWebApiError(error),
        complete : () => {
         console.log("Record Added Successfully ...");
         this.router.navigate(['/genres']);
