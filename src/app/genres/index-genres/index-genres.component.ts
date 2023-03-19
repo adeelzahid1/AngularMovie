@@ -15,25 +15,37 @@ export class IndexGenresComponent implements OnInit{
   constructor(private genreService : GenresService ){}
 
   ngOnInit(): void {
+    this.loadGenres();
 
-this.genreService.getAll().subscribe(
-  {
-    next: (genre) => {
-      this.genres = genre;
-      console.warn(this.genres);
-    },
-    error : (error) => {console.warn(error)},
-    complete : () => {
-      console.warn("done");
+ }
 
-    },
-     // doSomethingElse : ()
-   },
- );
+ loadGenres(){
+  this.genreService.getAll().subscribe(
+    {
+      next: (genre) => {
+        this.genres = genre;
+        console.warn(this.genres);
+      },
+      error : (error) => {console.warn(error)},
+      complete : () => {
+        console.warn("done");
+      },
+       // doSomethingElse : ()
+     },
+   );
+ }
 
+
+ deleteGenre(id: number){
+  let isAllow = confirm("Are You Sure to Delete This Record !!!");
+  if(isAllow){
+    this.genreService.deleteGenre(id).subscribe(() => {
+      this.loadGenres();
+    });
+  }
 
 };
 
 
-
 }
+
