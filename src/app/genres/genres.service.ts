@@ -19,11 +19,21 @@ export class GenresService {
     return this.httpClient.get<genreDTO[]>(`${this.apiURL}genre/GetGenres`);
   }
 
+  getGenre(id: number): Observable<genreDTO>{
+    debugger;
+    return this.httpClient.get<genreDTO>(`${this.apiURL}genre/GetGenre/${id}`);
+  }
+
   createGenre(genre: genreCreationDTO){
     debugger;
     return this.httpClient.post(`${this.apiURL}genre/SaveGenre`, genre)
   }
 
+  editGenre(id : number, genre: genreCreationDTO): Observable<genreDTO>{
+    debugger;
+      return this.httpClient.put<genreDTO>(`${this.apiURL}genre/EditGenre/${id}`, genre);
+      // return this.httpClient.put<genreDTO>(`${this.apiURL}genre/EditGenre/${id}`, genre);
+  }
 
 
 

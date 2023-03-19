@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { genreDTO } from '../genres.model';
 import { GenresService } from '../genres.service';
 
 @Component({
@@ -8,17 +9,24 @@ import { GenresService } from '../genres.service';
 })
 
 export class IndexGenresComponent implements OnInit{
+  genres: genreDTO[]=[];
+  columnToDisplay = ['name', 'actions'];
+
   constructor(private genreService : GenresService ){}
 
   ngOnInit(): void {
 
-    console.warn("Indexing INIT Called");
-
 this.genreService.getAll().subscribe(
   {
-    next: (genre) => { console.warn(genre);},
+    next: (genre) => {
+      this.genres = genre;
+      console.warn(this.genres);
+    },
     error : (error) => {console.warn(error)},
-    complete : () => {console.warn("done")},
+    complete : () => {
+      console.warn("done");
+
+    },
      // doSomethingElse : ()
    },
  );

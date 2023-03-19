@@ -13,7 +13,7 @@ export class DisplayErrorComponent implements OnInit{
   constructor() {}
 
   ngOnInit(): void {
-    console.warn("INIT Error");
+
     console.warn(this.errors);
   }
 
