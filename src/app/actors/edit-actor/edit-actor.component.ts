@@ -11,7 +11,7 @@ export class EditActorComponent implements OnInit{
 
   constructor(private activatedRouter: ActivatedRoute){}
 
-  model: actorDTO = {name: 'Jhon', dateOfBirth: new Date(), biography: 'default Value',
+  model: actorDTO = {id: 1,name: 'Jhon', dateOfBirth: new Date(), biography: 'default Value',
    picture: 'https://images.pexels.com/photos/9123067/pexels-photo-9123067.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'};
 
   ngOnInit(): void {

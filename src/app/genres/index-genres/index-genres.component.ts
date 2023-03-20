@@ -37,12 +37,14 @@ export class IndexGenresComponent implements OnInit{
 
 
  deleteGenre(id: number){
-  let isAllow = confirm("Are You Sure to Delete This Record !!!");
-  if(isAllow){
-    this.genreService.deleteGenre(id).subscribe(() => {
-      this.loadGenres();
-    });
-  }
+
+  this.genreService.deleteGenre(id).subscribe(() => {
+    this.loadGenres();
+  });
+
+  // using sweet alert instead of native js confirmation .
+  // let isAllow = confirm("Are You Sure to Delete This Record !!!");
+  // if(isAllow){}
 
 };
 

@@ -11,7 +11,7 @@ import { MarkdownModule } from 'ngx-markdown';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 import { MapComponent } from './utilities/map/map.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2'
 
 import { MenuComponent } from './menu/menu.component';
 import { RatingComponent } from './utilities/rating/rating.component';
@@ -85,6 +85,7 @@ import { DisplayErrorComponent } from './utilities/display-error/display-error.c
     LeafletModule,
     HttpClientModule,
     MarkdownModule.forRoot(),
+    SweetAlert2Module.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
