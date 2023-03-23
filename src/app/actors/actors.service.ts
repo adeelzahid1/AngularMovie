@@ -1,8 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { formatDateFormData } from '../utilities/utils';
-import { actorCreationDTO } from './actors.model';
+import { actorCreationDTO, actorDTO } from './actors.model';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +12,10 @@ export class ActorsService {
 
   constructor(private http: HttpClient) { }
   private apiURL = environment.apiURL;
+
+  getActor(): Observable<actorDTO[]>{
+    return this.http.get<actorDTO[]>(`${this.apiURL}actors/GetActors`)
+  }
 
   createActor(actor : actorCreationDTO){
     const formDate = this.buildFormData(actor);
@@ -35,5 +40,7 @@ export class ActorsService {
 
     return formData;
   }
+
+
 
 }
