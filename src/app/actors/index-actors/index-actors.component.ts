@@ -36,7 +36,11 @@ pageSize: number = 5;
     this.loadData();
   }
 
-  deleteActor(id: number){}
+  deleteActor(id: number){
+    this.actorService.deleteActor(id).subscribe( (response) => {
+      this.loadData();
+    });
+  }
 
 
 }
