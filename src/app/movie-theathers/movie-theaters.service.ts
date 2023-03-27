@@ -23,7 +23,8 @@ export class MovieTheatersService implements OnInit{
   // }
 
   public SaveMovieTheater(movieTheater: movieTheatherCreationDTO){
-    return this.httpClient.post(`${this.apiURL}movietheaters/SaveMovieTheater`, movieTheater);
+    console.warn(movieTheater);
+     return this.httpClient.post(`${this.apiURL}movietheaters/SaveMovieTheater`, movieTheater);
   }
 
 

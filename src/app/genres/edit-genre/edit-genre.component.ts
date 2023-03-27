@@ -20,6 +20,7 @@ export class EditGenreComponent implements OnInit{
     console.warn(params);
     alert(params['id']);
     this.genreService.getGenre(params['id']).subscribe((genre) => {
+      console.error(genre);
         this.model = genre;
     });
    });

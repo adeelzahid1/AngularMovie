@@ -42,7 +42,7 @@ export class MovieTheatherFormComponent implements OnInit{
 
   saveChanges(){
       this.onSaveChanges.emit(this.form.value);
-      console.log(this.form.value);
+      //console.log(this.form.value);
   }
 
   onSelectedLocation(coordinates: coordinatesMap){
