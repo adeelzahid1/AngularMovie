@@ -1,5 +1,7 @@
 <h2>Edit Movie Theather</h2>
 
-<app-movie-theather-form [model]="model" (onSaveChanges)="saveChanges($event)">
+<app-movie-theather-form *ngIf="model" [model]="model" (onSaveChanges)="saveChanges($event)">
 
 </app-movie-theather-form>
+
+<mat-spinner *ngIf="!model"></mat-spinner>
