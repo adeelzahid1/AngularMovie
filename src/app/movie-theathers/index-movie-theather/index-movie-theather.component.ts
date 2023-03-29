@@ -29,4 +29,5 @@ export class IndexMovieTheatherComponent implements OnInit{
   }
 
 
+
 }
